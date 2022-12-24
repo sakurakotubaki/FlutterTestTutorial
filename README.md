@@ -86,3 +86,33 @@ void main() {
   });
 }
 ```
+
+## GithubにTagをpushする方法
+
+操作はブランチと一緒で、タグ名ごとに個別に
+```
+$ git push origin TAGNAME (TAGNAME は任意のタグ名)
+```
+
+もしくは、全部一気に
+```
+$ git push origin --tags
+```
+で反映できます。
+
+また、タグのリモートからの削除もブランチと同様に
+```
+$ git tag -d TAGNAME  
+$ git push origin :TAGNAME
+```
+
+もしくは、
+```
+$ git push --delete origin TAGNAME
+```
+で削除。
+
+tag一覧を確認するコマンド
+```
+$ git tag
+```
